@@ -89,29 +89,61 @@
 
 /* Custom Overrides
 * --------------------------------------- */
-
-.fp-controlArrow.fp-next {
-  border-color: transparent transparent transparent #333 !important;
-  right: 50px !important;
+.fp-controlArrow {
+  border-color: transparent !important;
+  border-width: 0 !important;
 
   @include mobile {
-    border-width: 10px 0 10px 10px !important;
-    top: auto;
-    right: 20px !important;
+    border-width: 0 !important;
+    top: auto !important;
     bottom: 20%;
     margin-top: 0;
+  }
+
+  span {
+    font-size: 40px;
   }
 }
 
-.fp-controlArrow.fp-prev {
-  border-color: transparent #333 transparent transparent !important;
-  left: 50px !important;
+.fp-controlArrow.fp-next {
+  right: 100px !important;
+}
 
-  @include mobile {
-    border-width: 10px 10px 10px 0 !important;
-    top: auto;
-    left: 20px !important;
-    bottom: 20%;
-    margin-top: 0;
-  }
+.fp-controlArrow.fp-prev {
+  left: 50px !important;
+}
+
+#fp-nav {
+  top: 0 !important;
+  margin-top: 0 !important;
+  height: 100%;
+}
+
+#fp-nav ul {
+  display: none;
+}
+
+#fp-nav span.prev,
+#fp-nav span.next {
+  position: absolute;
+  font-size: 40px;
+  transition: opacity 1s;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 0;
+  height: 20px;
+  width: 10px;
+}
+
+#fp-nav span.prev {
+  top: 0;
+}
+
+#fp-nav span.next {
+  bottom: 50px;
+}
+
+#fp-nav span.inactive {
+  cursor: default;
+  opacity: 0.25;
 }
