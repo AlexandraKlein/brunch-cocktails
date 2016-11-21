@@ -30,17 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        $('#fp-nav').prepend('<span class="prev inactive">&#8593;</span>')
-                    .append('<span class="next">&#8595;</span>');
+        var $fpNav = $('#fp-nav');
+
+        $fpNav.prepend('<span class="prev inactive">&#8593;</span>')
+              .append('<span class="next">&#8595;</span>');
 
         $('.fp-controlArrow.fp-prev').prepend('<span class="prev">&#8592;</span>');
         $('.fp-controlArrow.fp-next').prepend('<span class="next">&#8594;</span>');
 
-        // Re-center the fullPage navigation
-        $('#fp-nav').css({ 'margin-top': '-' + ($('#fp-nav').height() / 2) + 'px' });
-
         // Add actions to the arrows
-        $('#fp-nav').find('span.prev, span.next').on('click', function() {
+        $fpNav.find('span.prev, span.next').on('click', function() {
             if ($(this).hasClass('prev')) {
                 $.fn.fullpage.moveSectionUp();
             } else {
