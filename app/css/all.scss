@@ -8,5 +8,10 @@
 @import "neat";
 @import "base/base";
 
+//partials
+@import "partials/mixins";
+@import "partials/snippets";
 
-// Import site specific CSS
+//components
+@import "components/bg-images";
+

@@ -1,0 +1,105 @@
+
+.section {
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+
+    @include mobile {
+      font-size: 34px;
+    }
+  }
+
+  h2 {
+    font-size: 34px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+}
+
+.section,
+.slide {
+  position: relative;
+  //background-size: 75%;
+  //background-repeat: no-repeat;
+  //background-position: center center;
+  //
+  //@include mobile {
+  //  background-size: contain;
+  //}
+
+  img {
+    position: absolute;
+    width: 70vw;
+    max-width: 1200px;
+    @extend .align-both;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.section {
+  padding: 50px 0 0 0;
+}
+
+
+//#section0{
+//  background-image: url('#{$root-asset-path}/bg1.jpg');
+//}
+//#section2{
+//  background-image: url('#{$root-asset-path}/bg2.jpg');
+//}
+//#section3{
+//  background-image: url('#{$root-asset-path}/bg3.jpg');
+//}
+//
+//
+///*slides
+//* --------------------------------------- */
+//#slide1{
+//  background-image: url('#{$root-asset-path}/bg4.jpg');
+//}
+//#slide2{
+//  background-image: url('#{$root-asset-path}/bg5.jpg');
+//}
+//#slide3{
+//  background-image: url('#{$root-asset-path}/bg6.jpg');
+//}
+
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+/* Custom Overrides
+* --------------------------------------- */
+
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent #333 !important;
+  right: 50px !important;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent #333 transparent transparent !important;
+  left: 50px !important;
+
+  @include mobile {
+    display: none;
+  }
+}

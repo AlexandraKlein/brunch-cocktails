@@ -1,15 +1,16 @@
 // Breakpoints have been moved to _grid-settings.scss, which is loaded before /base and Neat.
-
+$root-asset-path: '../img';
 // Typography
 $base-font-family: $font-stack-system; // Default bourbon stack
-$heading-font-family: $base-font-family;
+//$heading-font-family: $base-font-family;
+$heading-font-family: 'IM Fell DW Pica SC', serif;
 
 // Font Sizes
 $base-font-size: 1em;
 
 // Line height
 $base-line-height: 1.5;
-$heading-line-height: 1.2;
+$heading-line-height: 1;
 
 // Other Sizes
 $base-border-radius: 3px;
