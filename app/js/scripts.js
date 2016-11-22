@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#fullpage').fullpage({
             navigationPosition: 'left',
             loopHorizontal: false,
-            autoScrolling: false,
+            autoScrolling: true,
             slidesNavigation: true,
             lazyLoading: true,
             verticalCentered: false,
