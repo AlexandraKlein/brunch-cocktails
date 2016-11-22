@@ -29,12 +29,6 @@
   }
 
   .video-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
 
     @include mobile {
       background-image: url("#{$root-asset-path}/bg1.jpg");
@@ -43,9 +37,8 @@
       background-size: cover;
     }
 
-
     video#bgvid {
-      position: fixed;
+      position: absolute;
       min-width: 100%;
       min-height: 100%;
       width: auto;
