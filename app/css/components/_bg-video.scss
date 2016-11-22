@@ -1,0 +1,66 @@
+#hero {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  h1 {
+    @extend .align-both;
+    text-align: center;
+    color: $base-background-color;
+    font-size: 8vw;
+    letter-spacing: -.07vw;
+
+    &:after {
+      display: none;
+    }
+
+    span {
+      font-size: 7vw;
+    }
+
+    @include mobile {
+      font-size: 64px;
+      letter-spacing: -1px;
+
+      span {
+        font-size: 52px;
+      }
+    }
+  }
+
+  .video-wrapper {
+
+    @include mobile {
+      background-image: url("#{$root-asset-path}/bg1.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    video#bgvid {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      @extend .align-both;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .tinter {
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, .5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+

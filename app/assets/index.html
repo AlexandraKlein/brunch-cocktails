@@ -22,12 +22,46 @@
 </head>
 <body>
 
+<div class ="menu">
+	<nav class="nav">
+		<a href="index.html">Home</a>
+		<a href="">Chapters</a>
+		<a href="">Pages</a>
+		<a href="">Books</a>
+		<a href="">About</a>
+	</nav>
+</div>
+
+<section class="main">
+	<div class="main-header">
+		<div class="header-bar">
+			<a class="open-menu">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
 <div id="fullpage">
 	<div class="section " id="section0">
 		<h1>Project Big Book</h1>
 		<img id="1" data-src="img/bg1.jpg" alt=""/>
 		<a href="#" data-featherlight="#1"><img data-src="img/bg1.jpg" alt=""/></a>
 	</div>
+
+	<div id="fullpage">
+
+		<div class="section" id="hero">
+			<div class="video-wrapper">
+				<video autoplay muted loop poster="img/bg1.jpg" id="bgvid">
+					<source src="video/hero.mp4" type="video/mp4">
+					<source src="video/hero.webm" type="video/webm">
+					<source src="video/hero.ogv" type="video/ogg" />
+				</video>
+				<div class="tinter"></div>
+				<h1>Project<br/><span>Big Book</span></h1>
+			</div>
 
 	<div class="section" id="section1">
 		<div class="slide" id="slide1">
@@ -60,15 +94,19 @@
 	</div>
 </div>
 
+</section>
+
+
+
 <!-- End of body async scripts -->
 
   <script src="js/vendor.js"></script>
   <script src="js/app.js" onload="require('initialize');"></script>
-  <script src="js/app.js" onload="require('js/scripts');"></script>
+  <script src="js/app.js" onload="require('js/navigation');"></script>
+  <script src="js/app.js" onload="require('js/fullPageScroll');"></script>
   <script src="js/app.js" onload="require('libs/unveil.js/jquery.unveil');"></script>
   <script src="js/app.js" onload="require('libs/fullpage.js/dist/jquery.fullpage');"></script>
   <script src="js/app.js" onload="require('libs/fullpage.js/vendors/scrolloverflow');"></script>
-  <script src="js/app.js" onload="require('libs/featherlight/featherlight');"></script>
 
 </body>
 </html>

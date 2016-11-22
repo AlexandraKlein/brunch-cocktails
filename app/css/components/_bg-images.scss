@@ -3,24 +3,32 @@
   padding: 50px 0 0 0;
 
   h1 {
+    position: relative;
     font-size: 48px;
-    color: #000;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    width: 70vw;
+    max-width: 1200px;
+    text-align: left;
 
     @include mobile {
       font-size: 34px;
+      text-align: center;
     }
   }
 
   h2 {
+    position: relative;
     font-size: 34px;
-    color: #000;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    width: 70vw;
+    max-width: 1200px;
+    text-align: left;
 
     @include mobile {
       font-size: 28px;
+      text-align: center;
     }
   }
 
@@ -34,13 +42,6 @@
 .section,
 .slide {
   position: relative;
-  //background-size: 75%;
-  //background-repeat: no-repeat;
-  //background-position: center center;
-  //
-  //@include mobile {
-  //  background-size: contain;
-  //}
 
   img {
     opacity: 0;
@@ -54,37 +55,6 @@
       width: 100%;
     }
   }
-}
-
-
-//#section0{
-//  background-image: url('#{$root-asset-path}/bg1.jpg');
-//}
-//#section2{
-//  background-image: url('#{$root-asset-path}/bg2.jpg');
-//}
-//#section3{
-//  background-image: url('#{$root-asset-path}/bg3.jpg');
-//}
-//
-//
-///*slides
-//* --------------------------------------- */
-//#slide1{
-//  background-image: url('#{$root-asset-path}/bg4.jpg');
-//}
-//#slide2{
-//  background-image: url('#{$root-asset-path}/bg5.jpg');
-//}
-//#slide3{
-//  background-image: url('#{$root-asset-path}/bg6.jpg');
-//}
-
-
-/* Bottom menu
-* --------------------------------------- */
-#infoMenu li a {
-  color: #fff;
 }
 
 /* Custom Overrides
@@ -132,6 +102,7 @@
   height: 50px;
   width: 50px;
   left: -20px;
+  transition: all .05s ease-out;
 }
 
 #fp-nav span.prev {
@@ -140,6 +111,7 @@
 
 #fp-nav span.next {
   bottom: 10px;
+  color: $base-background-color;
 }
 
 #fp-nav span.inactive {
