@@ -1,5 +1,5 @@
 $transitionAll: all .05s ease-out;
-$transitionHeight: height 200ms ease-in-out;
+$transitionNav: height 200ms ease-in-out, border 200ms ease-in-out;
 $transitionEase: ease-in;
 
 body {
@@ -23,7 +23,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    transition: $transitionHeight;
+    transition: $transitionNav;
     transition-timing-function: $transitionEase;
     z-index: 19999;
     height: 0;
@@ -31,11 +31,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 0 solid $dark-gray;
 
     &.open {
       height: 100%;
       max-height: 100vh;
       overflow: hidden;
+      border: 22px solid $dark-gray;
     }
 
     nav {
