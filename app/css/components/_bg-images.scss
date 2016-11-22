@@ -34,13 +34,6 @@
 .section,
 .slide {
   position: relative;
-  //background-size: 75%;
-  //background-repeat: no-repeat;
-  //background-position: center center;
-  //
-  //@include mobile {
-  //  background-size: contain;
-  //}
 
   img {
     opacity: 0;
@@ -54,37 +47,6 @@
       width: 100%;
     }
   }
-}
-
-
-//#section0{
-//  background-image: url('#{$root-asset-path}/bg1.jpg');
-//}
-//#section2{
-//  background-image: url('#{$root-asset-path}/bg2.jpg');
-//}
-//#section3{
-//  background-image: url('#{$root-asset-path}/bg3.jpg');
-//}
-//
-//
-///*slides
-//* --------------------------------------- */
-//#slide1{
-//  background-image: url('#{$root-asset-path}/bg4.jpg');
-//}
-//#slide2{
-//  background-image: url('#{$root-asset-path}/bg5.jpg');
-//}
-//#slide3{
-//  background-image: url('#{$root-asset-path}/bg6.jpg');
-//}
-
-
-/* Bottom menu
-* --------------------------------------- */
-#infoMenu li a {
-  color: #fff;
 }
 
 /* Custom Overrides
