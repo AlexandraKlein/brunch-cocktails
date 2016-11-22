@@ -5,10 +5,15 @@
 
   h1 {
     @extend .align-both;
+    text-align: center;
     color: $base-background-color;
     font-size: 8vw;
     letter-spacing: -.07vw;
-    
+
+    &:after {
+      display: none;
+    }
+
     span {
       font-size: 7vw;
     }
