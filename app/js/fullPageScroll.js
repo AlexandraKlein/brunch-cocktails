@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             css3: true,
             easingcss3: 'ease-out',
             navigation: true,
-            navigationTooltips: ['First section', 'Second section', 'Third section'],
             dragAndMove: true,
             onLeave: function(index, nextIndex, direction) {
                 // Remove the inactive class from all arrows
@@ -27,6 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     $('#fp-nav > span.prev').addClass('inactive');
                 } else if (nextIndex == $('.fp-section').length) {
                     $('#fp-nav > span.next').addClass('inactive');
+                }
+
+                var vid = document.getElementById('bgvid');
+                if(index == 1 && direction =='down'){
+                    vid.pause();
+
+                    $('#fp-nav span.next').css({
+                        color: '#333'
+                    })
+
+                } else if(index == 2 && direction == 'up'){
+                    vid.play();
+
+                    $('#fp-nav span.next').css({
+                        color: '#fff'
+                    })
                 }
             }
         });
