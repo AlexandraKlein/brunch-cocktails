@@ -30,14 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 var vid = document.getElementById('bgvid');
                 if(index == 1 && direction =='down'){
-                    vid.pause();
+
+                    if ($(window).width() > 768) {
+                        vid.pause();
+                    }
 
                     $('#fp-nav span.next').css({
                         color: '#333'
                     })
 
                 } else if(index == 2 && direction == 'up'){
-                    vid.play();
+
+                    if ($(window).width() > 768) {
+                        vid.play();
+                    }
 
                     $('#fp-nav span.next').css({
                         color: '#fff'
