@@ -1,6 +1,6 @@
 $transitionAll: all .05s ease-out;
 $transitionHeight: height 200ms ease-in-out;
-$transitionEase: ease-out;
+$transitionEase: ease-in;
 
 body {
   position: static;
@@ -16,7 +16,7 @@ body {
   }
 
   .menu {
-    background-color: #fff;
+    background-color: $white;
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
     position: fixed;
@@ -39,22 +39,38 @@ body {
     }
 
     nav {
+      position: relative;
       font-family: $heading-font-family;
       margin-top: 128px;
       margin-bottom: 65px;
-      color: #fff;
+      color: $white;
       text-align: left;
       z-index: 9999;
+      padding-left: 40px;
+
+      @include mobile {
+        padding-left: 20px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        border-left: 0.8vmin solid $dark-gray;
+        height: 90%;
+        left: 0;
+        @extend .vertical-align;
+      }
 
       a {
+        font-size: 8vmin;
+        line-height: 1;
         text-decoration: none;
         display: block;
         color: $dark-gray;
-        margin: 45px 0;
-        font-size: 8vmin;
+        margin: 0;
 
         &:hover {
-          color: $black;
+          color: $light-gray;
         }
       }
     }
@@ -98,13 +114,13 @@ body {
             width: 50px;
 
             span {
-              transition-duration: 0.4s;
+              transition-duration: 0.2s;
               transition-timing-function: $transitionEase;
               display: block;
               position: absolute;
               height: 2px;
               width: 100%;
-              background-color: #fff;
+              background-color: $white;
               opacity: 1;
               left: 0;
 
