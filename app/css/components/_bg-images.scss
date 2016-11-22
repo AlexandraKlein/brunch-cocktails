@@ -18,12 +18,11 @@
   }
 
   h2 {
+    @extend .content-width;
     position: relative;
     font-size: 34px;
     margin: auto;
     padding: 0;
-    width: 70vw;
-    max-width: 1200px;
     text-align: left;
 
     @include mobile {
@@ -47,8 +46,7 @@
     opacity: 0;
     transition: opacity 1s ease-in;
     position: absolute;
-    width: 70vw;
-    max-width: 1200px;
+    @extend .content-width;
     @extend .align-both;
 
     @include mobile {
