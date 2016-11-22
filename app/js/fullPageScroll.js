@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     $('#fp-nav span.next').css({
                         color: '#333'
-                    })
+                    });
+
+                    $('a.open-menu .hamburger span').css({
+                        backgroundColor: '#333'
+                    });
 
                 } else if(index == 2 && direction == 'up'){
 
@@ -47,7 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     $('#fp-nav span.next').css({
                         color: '#fff'
-                    })
+                    });
+
+                    $('a.open-menu .hamburger span').css({
+                        backgroundColor: '#fff'
+                    });
                 }
             }
         });
